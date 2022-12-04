@@ -1,0 +1,507 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    scroll-behavior: smooth;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+@font-face {
+    font-family: 'space_boards_demoregular';
+    src: url(/font/Space/spaceboardsdemo-webfont.woff2) format('woff2'),
+         url('spaceboardsdemo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'kusanagiregular';
+    src: url(/font/kusanagi/kusanagi-webfont.woff2) format('woff2'),
+         url('kusanagi-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'space_ageregular';
+    src: url(/font/Space_Age/space_age-webfont.woff2) format('woff2'),
+         url('space_age-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+body{
+    overflow-x: hidden;
+}
+
+header{
+    width: auto;
+    height: 74px;
+    background-color: black;
+}
+
+header .navbar {
+	width: 	100%;
+	height: 74px;
+	background: #000000;
+    position: fixed;
+    z-index: 99;
+}
+
+header .navbar h1 {
+    font-family: 'space_boards_demoregular';
+    font-size: 48px;
+    margin-left: 50px;
+    padding-top: 3px;
+    background: linear-gradient(to right, #1d1d1d 2%, #FFFFFF 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: -2px;
+    left: 15px;
+}
+
+header .linebar {
+    display: block;
+    position: absolute;
+    top: 69px;
+    width: 0;
+    height: 5px;
+    z-index: 200;
+    background-image: linear-gradient(90deg, rgba(43, 43, 43, 0.967) 6%, rgb(197, 197, 197) 84%);
+}
+
+header .navbar .menu {
+    height: 80px;
+    text-align: center;
+    margin-top: -50px;
+
+}
+
+header .menu ul {
+    display: inline-block;
+    list-style: none;
+}
+
+.menu ul li {
+    text-align: center;
+    float: left;
+}
+
+.menu ul li a {
+    display: block;
+    font-size: 20px;
+    font-family: 'space_boards_demoregular';
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px;
+    line-height: 30px;
+}
+
+header a::after {
+    display: flex;
+    content: ' ';
+    border-bottom: 2px #646464 solid;
+    padding-bottom: 1%;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+header a:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* .active {
+    border: 2px white solid;
+    margin-top: -5px;
+    padding: 5px 8px;
+    border-radius: 10px;
+} */
+
+section {
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+section .content {
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+}
+
+section .hero {
+    width: auto;
+    min-height: 100vh;
+    background-image: url(/img/hero.jpg);
+    background-size: cover;
+}
+
+section .aster {
+    width: 200px;
+    height: 200px;
+    background-image: url(/img/aster2.png);
+    background-size: cover;
+    position: absolute;
+    top: -9px;
+    left: 85%;
+    z-index: 100;
+    animation: float 3.5s ease-in-out infinite;
+}
+
+section .aster2 {
+    width: 180px;
+    height: 180px;
+    background-image: url(/img/aster.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0px;
+    left: 2%;
+    z-index: 100;
+    animation: float 4.5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-60px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+section .content h1 {
+    font-family: 'kusanagiregular';
+    position: absolute;
+    left: 12%;
+    top: 23%;
+    font-size: 38px;
+}
+
+.typing {
+    animation: typing 5s steps(29), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 5px solid;
+
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    } 
+    to {
+        width: 860px;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+section h1 .light {
+    color: white;
+}
+
+section .about  {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(12, 12, 12);
+    position: relative;
+    background-image: url(/img/marsHero.jpg);
+}
+
+section .container {
+    width: 70%;
+    min-height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px white solid;
+    backdrop-filter: blur(4px);
+}
+
+section .bg {
+    width: 70%;
+    min-height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+section .mars {
+    width: 250px;
+    height: 250px;
+    background-image: url(/img/mars.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 178%;
+    left: 7%;
+    z-index: 100;
+    -moz-animation: rota-full-left 20s infinite linear;
+    -webkit-animation: rota-full-left 20s infinite linear;
+}
+
+@-moz-keyframes rota-full-left {
+     0% {-moz-transform: rotate(0deg);}                     
+     100% {-moz-transform: rotate(-360deg);}
+}
+@-webkit-keyframes rota-full-left {
+     0% {-webkit-transform: rotate(0deg);}                    
+     100% {-webkit-transform: rotate(-360deg);}
+}
+
+section .textline {
+    font-family: 'space_ageregular';
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 120%;
+    left: 75%;
+    background-color: black;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    z-index: 100;
+}
+
+section .text h1{
+    width: 250px;
+    height: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: 133%;
+    left: 20%;
+}
+
+section .text p{
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    top: 140%;
+    left: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: white;   
+}
+
+section .line {
+    width: 50px;
+    height: 6px;
+    position: absolute;
+    top: 135%;
+    left: 16%;
+    background-color: rgb(255, 106, 0);
+}
+
+section .bg .me {
+    width: 100%;
+    height: 520px;
+    background-image: url(/img/Aing.png);
+    background-size: cover;
+    z-index: 100;
+}
+
+.footer {
+	position: relative;
+	width: auto;
+	height: 160px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    padding: 0;
+}
+
+.footer ul div {
+    width: 500px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+}
+
+.footer ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    margin: 0 20px;
+}
+
+.footer ul li span {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    background: #2a2a2a;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 30px !important;
+    transition: 1.5s ease-out;
+}
+
+.footer ul li:hover span {
+    transition: .3s;
+}
+
+.footer ul li:nth-child(2):hover span {
+    background: #6A9AEE !important;
+}
+
+.footer ul li:nth-child(3):hover span {
+    background: #CC296C !important;
+}
+
+.footer ul li:nth-child(4):hover span {
+    background: #2C3456 !important;
+}
+
+section .heroes  {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    background-image: url(/img/552585.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section .border {
+    width: 80%;
+    min-height: 80vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px white solid;
+    backdrop-filter: blur(7px);
+
+}
+
+section .moon{
+    width: 200px;
+    height: 200px;
+    background-image: url(/img/moon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 235%;
+    left: 84%;
+    z-index: 100;
+    -moz-animation: rota-full-left 20s infinite linear;
+    -webkit-animation: rota-full-left 20s infinite linear;
+}
+
+section .astro {
+    width: 250px;
+    height: 250px;
+    background-image: url(/img/astro.png);
+    background-size: cover;
+    position: absolute;
+    top: 298%;
+    left: 4%;
+    z-index: 100;
+    animation: float 3.5s ease-in-out infinite;
+}
+
+section .skill {
+    width: 600px;
+    height: 500px;
+    font-family: 'space_ageregular';
+    font-weight: 700;
+    position: absolute;
+    top: 250%;
+    left: 20%;
+    color: white;
+}
+
+section .skill h1 {
+    font-size: 40px;
+    border-bottom: 2px white solid;
+}
+
+section .skill ul li{
+    list-style-type: circle;
+    font-size: 34px;
+    margin-top: 10px;
+}
+
+section .cv input{
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    left: 30%;
+    top: 300%;
+    padding: 10px;
+    font-family: 'space_ageregular';
+    font-size: 18px;
+    background: transparent;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+section .cv .rocket{
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    left: 30%;
+    top: 297%;
+    background-image: url(/img/rocket.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(20deg);
+}
